@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.fdq.findclassplugin.FindClassAction</id>
+  <name>Find Class Plugin</name>
+  <version>1.0</version>
+  <vendor email="isreal_ufll@163.com" url="https://www.thinln.com">QQCY</vendor>
+
+  <description><![CDATA[
+      Help you to find class file from java source file.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Version 1 init.<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="162"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="FindClassPlugin" class="com.fdq.findclassplugin.FindClassAction" text="Find Class Plugin"
+            description="根据java找到class">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="before" relative-to-action="ShowFilePath"/>
+    </action>
+  </actions>
+
+</idea-plugin>
